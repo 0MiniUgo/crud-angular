@@ -1,7 +1,7 @@
 <mat-card>
   <mat-toolbar color="primary">Criar novo curso</mat-toolbar>
   <mat-card-content>
-    <form [formGroup]="form">
+    <form [formGroup]="form" class="min-width">
       <mat-form-field class="full-width">
         <input matInput placeholder="Nome" formControlName="name" />
       </mat-form-field>
@@ -13,7 +13,7 @@
           <mat-option value="Front-end">Front-end</mat-option>
           <mat-option value="Back-end">Back-end</mat-option>
           <mat-option value="Dados">Dados</mat-option>
-          <mat-option value="SQL">Banco de Dados</mat-option>
+          <mat-option value="SQL">SQL</mat-option>
         </mat-select>
       </mat-form-field>
     </form>
