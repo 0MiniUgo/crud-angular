@@ -7,6 +7,7 @@ import { AppMaterialModule } from './../shared/app-material/app-material.module'
 import { CourseFormComponent } from './course-form/course-form.component';
 import { CoursesRoutingModule } from './courses-routing.module';
 import { CoursesComponent } from './courses/courses.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 
 
 
@@ -15,7 +16,8 @@ import { CoursesComponent } from './courses/courses.component';
 @NgModule({
   declarations: [
     CoursesComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    CoursesListComponent
   ],
   imports: [
     CommonModule,

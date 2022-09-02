@@ -22,7 +22,7 @@ export class CoursesService {
     );
   }
 
-  saveCourse(course: Course){
+  saveCourse(course: Partial<Course>){
     return this.httpClient.post<Course>(this.API, course).pipe(first());
   }
 }
