@@ -18,7 +18,7 @@ export class CoursesService {
     .pipe(
       first(),
       //delay(2000),
-      tap(courses => console.log(courses))
+      //tap(courses => console.log(courses))
     );
   }
 
@@ -27,6 +27,21 @@ export class CoursesService {
   }
 
   saveCourse(course: Partial<Course>){
+    console.log(course)
+
+    if(course._id){
+      //console.log('update')
+      return this.update(course);
+    }
+    //console.log('create')
+    return this.create(course);
+  }
+
+  private create(course: Partial<Course>){
     return this.httpClient.post<Course>(this.API, course).pipe(first());
+  }
+
+  private update(course: Partial<Course>){
+    return this.httpClient.put<Course>(`${this.API}/${course._id}`, course).pipe(first());
   }
 }
